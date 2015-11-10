@@ -1,58 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>EshopExample</title>
-	<meta http-equiv="X-UA-Compatible" content="IE-Edge">
-	<meta charset="UTF-8"> 
+	<title>AdminGUI</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
 	
 	<!-- picture for title icon -->
 	<link rel="shortcut icon" type="image/x-icon" href="img/people.png" />
 
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
 
 	<!-- Styles -->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link href="css/sb-admin.css" rel="stylesheet">
+
+	<!-- Custom Fonts -->
+	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet"
+	type="text/css">
+	<!-- Morris Charts CSS -->
+	<link href="css/plugins/morris.css" rel="stylesheet">
 </head>
 
-<body ng-app="eshop" ng-cloak>
+<body ng-app="app" ng-cloak>
 
-	<div class="container">
+	
+
+	<!-- header -->
+	<div ng-include="'view/header.html'"></div> 
+	<!-- body inside -->
+
+
+	<div ng-view></div>
+
+	<!-- footer -->
+	<!-- <div ng-include="'view/footer.html'"></div>  -->
+
 		
-		<!-- header -->
-		<div ng-include="'view/header.html'"></div> 
-		<!-- body inside -->
-		<div ng-view></div>
-		<!-- footer -->
-		<div ng-include="'view/footer.html'"></div> 
 
-	</div>
+
 	
 	<!-- Jquerry -->
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="js/jquery.min.js"></script>
 
 	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
 
 	<!-- load angular via CDN -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+	<script src="js/angular.min.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-route.js"></script>
+	<script src="js/angular-route.js"></script>
 
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-resource.js"></script>
+	<script src="js/angular-resource.js"></script>
 
 	<!-- Modules -->
 	<script type="text/javascript" src="app/app.js"></script>
 	<!-- Controllers -->
 	<script type="text/javascript" src="app/controllers/loginController.js"></script>
-	<script type="text/javascript" src="app/controllers/newUser.js"></script>
-	<script type="text/javascript" src="app/controllers/customersController.js"></script>
-	<script type="text/javascript" src="app/controllers/ordersController.js"></script>
-	<script type="text/javascript" src="app/controllers/customerOrdersController.js"></script>
 	<script type="text/javascript" src="app/controllers/footerHeaderController.js"></script>
+
+
+	<script type="text/javascript" src="app/controllers/dashboardController.js"></script>
+	<script type="text/javascript" src="app/controllers/tasksController.js"></script>
+	<script type="text/javascript" src="app/controllers/usersController.js"></script>
+	<script type="text/javascript" src="app/controllers/maintanenceController.js"></script>
+	<script type="text/javascript" src="app/controllers/consoleController.js"></script>
 	<!-- Service -->
 	<script type="text/javascript" src="app/service/customersService.js"></script>
 	<script type="text/javascript" src="app/service/loginService.js"></script>

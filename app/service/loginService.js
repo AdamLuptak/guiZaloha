@@ -1,4 +1,4 @@
-eshopApp.service('loginService', function () {
+adminGuiApp.service('loginService', function () {
   
     var data = {
        email:"admin@admin",

@@ -1,5 +1,5 @@
-//controler for customerControler
-    eshopApp.controller('CustomersController',['$scope', 'customersService','$routeParams', 'showElementsService',function($scope, customersService,$routeParams,showElementsService) {
+/controler for customerControler
+    adminGuiApp.controller('CustomersController',['$scope', 'customersService','$routeParams', 'showElementsService',function($scope, customersService,$routeParams,showElementsService) {
    //I like to have an init() for controllers that need to perform some initialization. Keeps things in
     //one place...not required though especially in the simple example below
     init();
