@@ -1,0 +1,35 @@
+<!-- 	<div>
+		<div ng-controller="ControllerOne">
+			<input ng-model="message">
+			<button ng-click="handleClick(message)">work</button>
+		</div>
+		<div ng-controller="ControllerTwo">
+			<input ng-model="message">
+		</div>
+		<div ng-controller="ControllerThree">
+			<input ng-model="message">
+		</div>
+
+	</div> -->
+
+	<header ng-controller="FooterHeaderController">
+        <div  ng-if= 'headerShow()'>
+            <nav class="navbar navbar-default" ng-if="1" ng-cloak>
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" ><img id="peopleImg" src="img/people.png"> 
+                            Customers</a>
+                        </div>
+                        <div>
+                            <ul class="nav navbar-nav">
+                                <li ng-class="{'active': headerShowTab() === '1'}"><a href="#/customers/1">Customers</a></li>
+                                <li ng-class="{'active': headerShowTab() === '2'}"><a href="#/orders/2">Orders</a></li>
+                                <li ng-class="{'active': headerShowTab() === '3'}"><a href="#/newUser/3">NewUser</a></li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </nav>
+            </div>
+        </header>

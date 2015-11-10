@@ -1,0 +1,76 @@
+<div class="container">
+    <div class="row" >
+      <div class="col-md-4 ">
+        <h1>New User</h1>
+        <form name="signup_form" novalidate > 
+                        <fieldset>
+<!-- name -->
+<div class="form-group">
+    <input type="text" placeholder="Name" class="form-control"
+                id="inputLogin" name="name" ng-model="signup.name" ng-minlength=3
+                ng-maxlength=20 required>
+
+            <div class="error, errorMesagges"
+                ng-show="signup_form.name.$dirty && signup_form.name.$invalid">
+                <small class="error" ng-show="signup_form.name.$error.required">
+                    Your name is required. </small> <small class="error"
+                    ng-show="signup_form.name.$error.minlength"> Your name is
+                    required to be at least 3 characters </small> <small class="error"
+                    ng-show="signup_form.name.$error.maxlength"> Your name
+                    cannot be longer than 20 characters </small>
+                </div>
+            </div>
+<!-- firstName -->
+<!-- lastName -->
+<!-- loginName -->
+<!-- password -->
+<!-- email -->
+<!-- phome -->
+
+
+                            <div class="form-group">
+                                <input class="form-control" placeholder="E-mail" name="email" type="email" autofocus ng-model="signup.email" required >
+                                <div class="error" ng-show="signup_form.email.$dirty && signup_form.email.$invalid">
+                                   <small class="error" ng-show="signup_form.email.$error.required">
+                                    Your email is required.
+                                </small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <input class="form-control" placeholder="password" name="password" type="password" ng-model="signup.password" required >
+                            <div class="error" ng-show="signup_form.password.$dirty && signup_form.password.$invalid">
+                                <small class="error" 
+                                ng-show="signup_form.password.$error.required">
+                                Your email is required.
+                            </small>
+                        </div>
+                    </div>
+
+
+
+                    <div class="checkbox">
+                        <label>
+                            <input name="remember" type="checkbox" value="Remember Me" ng-model="signup.FormRememeberCheck">Remember Me
+                        </label>
+                    </div>
+                    <!-- Change this to a button or input when using this as a form -->
+                    <button type="submit" class="btn btn-lg btn-default btn-block"  ng-click="signupForm(signup)">Login</button>
+
+                </fieldset>
+            </form>
+        </div>
+        <div class="col-md-8">
+            <div ng-controller="uploader">
+               <input type="file" ng-model-instant id="fileToUpload" multiple onchange="angular.element(this).scope().setFiles(this)" />
+               <input type="file" ng-file-select="onFileSelect($files)" >
+ <b>Preview:</b><br />
+   <i ng-hide="imageSrc">No image choosed</i>
+   <img ng-src="{{imageSrc}}" /><br/>
+   <b>Progress:</b>
+  <progress value="{{progress}}"></progress>
+   </div>
+               
+    </div>
+    </div>
+</div>
